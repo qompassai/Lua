@@ -162,7 +162,7 @@ If you like Qompass AI and the work we do, consider [buying us a coffee](https:/
 <details id="Dual-License Notice">
   <summary><strong>What a Dual-License Means</strong></summary>
 Badge
-
+</details>
 ### Protection for Vulnerable Populations
 
 The dual licensing aims to address the cybersecurity gap that disproportionately affects underserved populations. As highlighted by recent attacks[^1], low-income residents, seniors, and foreign language speakers face higher-than-average risks of being victims of cyberattacks. By offering both open-source and commercial licensing options, we encourage the development of cybersecurity solutions that can reach these vulnerable groups while also enabling sustainable development and support.
@@ -207,7 +207,6 @@ By offering both open source and commercial licensing options, we strive to crea
 [^7]: [A Proclamation on Cybersecurity Awareness Month, 2024 ](https://www.whitehouse.gov/briefing-room/presidential-actions/2024/09/30/a-proclamation-on-cybersecurity-awareness-month-2024/)
 
 [^8]: [Minneapolis school district says data breach affected more than 100,000 people](https://therecord.media/minneapolis-schools-say-data-breach-affected-100000/)
-
 </details>
 
 ![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Lua)

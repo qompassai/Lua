@@ -161,8 +161,7 @@ If you like Qompass AI and the work we do, consider [buying us a coffee](https:/
 
 <details id="Dual-License Notice">
   <summary><strong>What a Dual-License Means</strong></summary>
-Badge
-</details>
+
 ### Protection for Vulnerable Populations
 
 The dual licensing aims to address the cybersecurity gap that disproportionately affects underserved populations. As highlighted by recent attacks[^1], low-income residents, seniors, and foreign language speakers face higher-than-average risks of being victims of cyberattacks. By offering both open-source and commercial licensing options, we encourage the development of cybersecurity solutions that can reach these vulnerable groups while also enabling sustainable development and support.

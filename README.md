@@ -55,6 +55,7 @@ Matthew A. Porter, BSc<sup>1</sup>
 [![HuggingFace](https://img.shields.io/badge/HuggingFace-qompass-yellow?style=flat-square&logo=huggingface)](https://huggingface.co/qompass)
 [![Epic Games Developer](https://img.shields.io/badge/Epic_Games-Developer_Program-313131?style=for-the-badge&logo=epic-games&logoColor=white)](https://dev.epicgames.com/)
 </div>
+</details>
 
 <details id="FAQ">
   <summary><strong>Frequently Asked Questions</strong></summary>

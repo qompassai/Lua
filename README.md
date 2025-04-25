@@ -5,7 +5,6 @@
 <p align="center">
   <a href="https://www.gnu.org/licenses/agpl-3.0">
     <img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="License: AGPL v3">
-  </a>
   <a href="./LICENSE-QCDA">
     <img src="https://img.shields.io/badge/license-Q--CDA-lightgrey.svg" alt="License: Q-CDA">
   </a>
@@ -24,25 +23,78 @@
 <details id="Contact">
   <summary><strong>Contact Qompass AI</strong></summary>
 
-<p align="center">
-Matthew A. Porter, BSc<sup>1</sup>
-<sup>1</sup>Qompass AI, Spokane, WA  
-
-<p align="center">
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/phaedrusflow)
-
-[![Personal LinkedIn](https://img.shields.io/badge/LinkedIn-Matt--Porter-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/matt-a-porter-103535224/)
-[![Startup LinkedIn](https://img.shields.io/badge/LinkedIn-Qompass--AI-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/company/95058568/)
-[![ORCID](https://img.shields.io/badge/ORCID-0000--0002--0302--4812-green?style=flat-square&logo=orcid)](https://orcid.org/0000-0002-0302-4812)
-[![ResearchGate](https://img.shields.io/badge/ResearchGate-Open--Research-blue?style=flat-square&logo=researchgate)](https://www.researchgate.net/profile/Matt-Porter-7)
-</div>
-<h3 align="center">Social Media</h3>
-<div align="center">
+ <div align="center">
+  <p>Matthew A. Porter<sup>1</sup><br>
+  <sup>1</sup>Qompass AI, Spokane, WA</p>
   
-[![X/Twitter](https://img.shields.io/badge/Twitter-@PhaedrusFlow-blue?style=flat-square&logo=twitter)](https://twitter.com/PhaedrusFlow)
-[![Instagram](https://img.shields.io/badge/Instagram-phaedrusflow-purple?style=flat-square&logo=instagram)](https://www.instagram.com/phaedrusflow)
-[![YouTube](https://img.shields.io/badge/YouTube-QompassAI-red?style=flat-square&logo=youtube)](https://www.youtube.com/@qompassai)
+  <h3>Publications</h3>
+  <p>
+    <a href="https://orcid.org/0000-0002-0302-4812">
+      <img src="https://img.shields.io/badge/ORCID-0000--0002--0302--4812-green?style=flat-square&logo=orcid" alt="ORCID">
+    </a>
+    <a href="https://www.researchgate.net/profile/Matt-Porter-7">
+      <img src="https://img.shields.io/badge/ResearchGate-Open--Research-blue?style=flat-square&logo=researchgate" alt="ResearchGate">
+    </a>
+    <a href="https://zenodo.org/communities/qompassai">
+      <img src="https://img.shields.io/badge/Zenodo-Publications-blue?style=flat-square&logo=zenodo" alt="Zenodo">
+    </a>
+  </p>
+  
+  <h3>Professional Profiles</h3>
+  <p>
+    <a href="https://www.linkedin.com/in/matt-a-porter-103535224/">
+      <img src="https://img.shields.io/badge/LinkedIn-Matt--Porter-blue?style=flat-square&logo=linkedin" alt="Personal LinkedIn">
+    </a>
+    <a href="https://www.linkedin.com/company/95058568/">
+      <img src="https://img.shields.io/badge/LinkedIn-Qompass--AI-blue?style=flat-square&logo=linkedin" alt="Startup LinkedIn">
+    </a>
+  </p>
+  
+  <h3>Social Media</h3>
+  <p>
+    <a href="https://twitter.com/PhaedrusFlow">
+      <img src="https://img.shields.io/badge/Twitter-@PhaedrusFlow-blue?style=flat-square&logo=twitter" alt="X/Twitter">
+    </a>
+    <a href="https://www.instagram.com/phaedrusflow">
+      <img src="https://img.shields.io/badge/Instagram-phaedrusflow-purple?style=flat-square&logo=instagram" alt="Instagram">
+    </a>
+    <a href="https://www.youtube.com/@qompassai">
+      <img src="https://img.shields.io/badge/YouTube-QompassAI-red?style=flat-square&logo=youtube" alt="YouTube">
+    </a>
+  </p>
+  
+<div align="center">
+<h3>Support & Funding</h3>
+
+<table>
+<tr>
+<th align="center">💰 Pre-Seed Funding 2023-2025</th>
+<th align="center">🏆 Amount</th>
+<th align="center">📅 Date</th>
+</tr>
+<tr>
+<td><a href="https://github.com/qompassai/r4r" title="RJOS/Zimmer Biomet Research Grant Repository">RJOS/Zimmer Biomet Research Grant</a></td>
+<td align="center">$30,000</td>
+<td align="center">March 2024</td>
+</tr>
+<tr>
+<td><a href="https://github.com/qompassai/PathFinders" title="Pathfinders Intern Program Repository">Pathfinders Intern Program</a></td>
+<td align="center">$2,000</td>
+<td align="center">October 2024</td>
+</tr>
+</table>
+
+<p>Your support helps us continue building innovative solutions at the intersection of health and education.</p>
+
+<a href="https://www.buymeacoffee.com/phaedrusflow" target="_blank">
+<img src="https://img.shields.io/badge/Buy_Me_A_Coffee-Support-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" width="250" />
+</a>
+
+<hr width="50%" style="height:2px;border-width:0;color:gray;background-color:gray">
+
+<p><i>Funding helps us continue our research at the intersection of AI, healthcare, and education</i></p>
 </div>
+
 <h3 align="center">Developer Programs</h3>
 <div align="center">
  

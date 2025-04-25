@@ -11,7 +11,7 @@
 </p>
 
 
-## 📄 Lua Projects
+### 📄 Lua Projects
 
 - [Qompass Diver](https://github.com/qompassai/Diver)
 - [Qompass rose.nvim](https://github.com/qompassai/rose.nvim)
@@ -78,7 +78,11 @@
 <td align="center">March 2024</td>
 </tr>
 <tr>
-<td><a href="https://github.com/qompassai/PathFinders" title="Pathfinders Intern Program Repository">Pathfinders Intern Program</a></td>
+<td onclick="window.open('https://github.com/qompassai/PathFinders', '_blank')">
+  <a href="https://github.com/qompassai/PathFinders" title="GitHub Repository">Pathfinders Intern Program</a>
+  <br>
+  <small><a href="https://www.linkedin.com/posts/evergreenbio_bioscience-internships-workforcedevelopment-activity-7253166461416812544-uWUM/" onclick="event.stopPropagation()" target="_blank">View on LinkedIn</a></small>
+</td>
 <td align="center">$2,000</td>
 <td align="center">October 2024</td>
 </tr>
@@ -194,14 +198,6 @@ Badge
 ---
 
 - See `.zenodo.json` for metadata, authorship, licensing, and related software attribution.
-</details>
-
-<details id="Support">
-  <summary><strong>How You Can Support</strong></summary>
-Badge
-
-If you like Qompass AI and the work we do, consider [buying us a coffee](https://www.buymeacoffee.com/phaedrusflow) ☕ or sponsoring ❤️.
-
 </details>
 
 ## 🧭 Attribution

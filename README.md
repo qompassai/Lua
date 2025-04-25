@@ -17,6 +17,7 @@
 - [Qompass Diver](https://github.com/qompassai/Diver)
 - [Qompass rose.nvim](https://github.com/qompassai/rose.nvim)
 - [Qompass blaze.nvim](https://github.com/qompassai/blaze.nvim)
+- [Qompass blaze-ts.nvim](https://github.com/qompassai/blaze-ts.nvim)
 
 ---
 
@@ -28,12 +29,8 @@ Matthew A. Porter, BSc<sup>1</sup>
 <sup>1</sup>Qompass AI, Spokane, WA  
 
 <p align="center">
-
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/phaedrusflow)
 
-
-<div align="center">
-  
 [![Personal LinkedIn](https://img.shields.io/badge/LinkedIn-Matt--Porter-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/matt-a-porter-103535224/)
 [![Startup LinkedIn](https://img.shields.io/badge/LinkedIn-Qompass--AI-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/company/95058568/)
 [![ORCID](https://img.shields.io/badge/ORCID-0000--0002--0302--4812-green?style=flat-square&logo=orcid)](https://orcid.org/0000-0002-0302-4812)
@@ -207,5 +204,7 @@ By offering both open source and commercial licensing options, we strive to crea
 
 [^8]: [Minneapolis school district says data breach affected more than 100,000 people](https://therecord.media/minneapolis-schools-say-data-breach-affected-100000/)
 </details>
+
+
 
 ![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Lua)

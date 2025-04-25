@@ -16,23 +16,21 @@
 
 - [Qompass Diver](https://github.com/qompassai/Diver)
 - [Qompass rose.nvim](https://github.com/qompassai/rose.nvim)
-
-## 🧭 Attribution
-
-- Built by [Qompass AI](https://github.com/qompassai)
-- Maintained by [Qompass AI](https://qompass.ai)/(https://github.com/phaedrusflow)
+- [Qompass blaze.nvim](https://github.com/qompassai/blaze.nvim)
 
 ---
 
-<
-## Authors
+<details id="Contact">
+  <summary><strong>Contact Qompass AI</strong></summary>
+
 <p align="center">
 Matthew A. Porter, BSc<sup>1</sup>
 <sup>1</sup>Qompass AI, Spokane, WA  
 
+<p align="center">
+
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/phaedrusflow)
 
-<div align="center">
 
 <div align="center">
   
@@ -155,6 +153,10 @@ Badge
 If you like Qompass AI and the work we do, consider [buying us a coffee](https://www.buymeacoffee.com/phaedrusflow) ☕ or sponsoring ❤️.
 
 </details>
+
+## 🧭 Attribution
+
+
 
 <details id="Dual-License Notice">
   <summary><strong>What a Dual-License Means</strong></summary>

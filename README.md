@@ -14,8 +14,8 @@
 
 ## 📄 Lua Projects
 
-[Qompass Diver](https://github.com/qompassai/Diver)
-[Qompass rose.nvim](https://github.com/qompassai/rose.nvim)
+- [Qompass Diver](https://github.com/qompassai/Diver)
+- [Qompass rose.nvim](https://github.com/qompassai/rose.nvim)
 
 ## 🧭 Attribution
 
@@ -24,25 +24,15 @@
 
 ---
 
-<p align="center">
-  <a href="https://www.gnu.org/licenses/agpl-3.0">
-    <img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="License: AGPL v3">
-  </a>
-  <a href="./LICENSE-QCDA">
-    <img src="https://img.shields.io/badge/license-Q--CDA-lightgrey.svg" alt="License: Q-CDA">
-  </a>
-</p>
-
-<div align="center">
-
+<
 ## Authors
 <p align="center">
 Matthew A. Porter, BSc<sup>1</sup>
+
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/phaedrusflow)
 <sup>1</sup>Qompass AI, Spokane, WA  
 <div align="center">
 
-<h4 align="center">Connect With Me</h4>
 <div align="center">
   
 [![Personal LinkedIn](https://img.shields.io/badge/LinkedIn-Matt--Porter-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/matt-a-porter-103535224/)
@@ -146,7 +136,7 @@ Where:
 <details id="Zenodo DOI">
   <summary><strong>Digital Object Identifier (DOI) for public transparency and accountability</strong></summary>
 Badge
-</details>
+
 
 ```markdown
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxx)
@@ -155,6 +145,7 @@ Badge
 ---
 
 - See `.zenodo.json` for metadata, authorship, licensing, and related software attribution.
+</details>
 
 <details id="Support">
   <summary><strong>How You Can Support</strong></summary>
@@ -163,6 +154,7 @@ Badge
 If you like Qompass AI and the work we do, consider [buying us a coffee](https://www.buymeacoffee.com/phaedrusflow) ☕ or sponsoring ❤️.
 
 </details>
+
 <details id="Dual-License Notice">
   <summary><strong>What a Dual-License Means</strong></summary>
 Badge
@@ -211,6 +203,7 @@ By offering both open source and commercial licensing options, we strive to crea
 [^7]: [A Proclamation on Cybersecurity Awareness Month, 2024 ](https://www.whitehouse.gov/briefing-room/presidential-actions/2024/09/30/a-proclamation-on-cybersecurity-awareness-month-2024/)
 
 [^8]: [Minneapolis school district says data breach affected more than 100,000 people](https://therecord.media/minneapolis-schools-say-data-breach-affected-100000/)
+
 </details>
 
 ![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Lua)

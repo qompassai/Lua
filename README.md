@@ -1,7 +1,19 @@
-# Equator Lua
+<h1 align="center">Equator Lua</h1>
 
-## Educational Content on the Lua Programming Language
+<h2 align="center">Educational Content on the Lua Programming Language</h2>
 
+<p align="center">
+  ![Lua](https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
+</p>
+
+<p align="center">
+  <a href="https://www.lua.org/docs.html">
+    <img src="https://img.shields.io/badge/Lua-Documentation-blue?style=flat-square" alt="Lua Documentation">
+  </a>
+  <a href="https://github.com/topics/lua-tutorial">
+    <img src="https://img.shields.io/badge/Lua-Tutorials-green?style=flat-square" alt="Lua Tutorials">
+  </a>
+</p>
 <p align="center">
   <a href="https://www.gnu.org/licenses/agpl-3.0">
     <img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="License: AGPL v3">
@@ -9,7 +21,6 @@
     <img src="https://img.shields.io/badge/license-Q--CDA-lightgrey.svg" alt="License: Q-CDA">
   </a>
 </p>
-
 
 ### 📄 Lua Projects
 

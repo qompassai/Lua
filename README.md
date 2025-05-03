@@ -3,6 +3,9 @@
 <h2 align="center">Educational Content on the Lua Programming Language</h2>
 
 <p align="center">
+
+![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Lua)
+
   <a href="https://www.lua.org/"><img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" alt="Lua"></a>
   <br>
   <a href="https://www.lua.org/docs.html"><img src="https://img.shields.io/badge/Lua-Documentation-blue?style=flat-square" alt="Lua Documentation"></a>
@@ -254,10 +257,3 @@ By offering both open source and commercial licensing options, we strive to crea
 [^8]: [Minneapolis school district says data breach affected more than 100,000 people](https://therecord.media/minneapolis-schools-say-data-breach-affected-100000/)
 </div>
 </details>
-
-![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Lua)
-
-<p align="center">
-  <i>Last Updated: <timestamp></i>
-</p>
-

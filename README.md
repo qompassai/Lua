@@ -5,6 +5,7 @@
 <p align="center">
 
 ![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Lua)
+![GitHub all releases](https://img.shields.io/github/downloads/qompassai/Lua/total?style=flat-square)
 
   <a href="https://www.lua.org/"><img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" alt="Lua"></a>
   <br>

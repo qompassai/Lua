@@ -1,3 +1,8 @@
+<!-- /qompassai/Lua/README.md -->
+<!-- ---------------------------- -->
+<!-- Copyright (C) 2025 Qompass AI, All rights reserved -->
+
+
 <h1 align="center">Equator Lua</h1>
 
 <h2 align="center">Educational Content on the Lua Programming Language</h2>

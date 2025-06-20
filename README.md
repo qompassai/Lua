@@ -3,7 +3,7 @@
 <!-- Copyright (C) 2025 Qompass AI, All rights reserved -->
 
 
-<h1 align="center">Equator Lua</h1>
+<h1 align="center">Qompass AI on Lua</h1>
 
 <h2 align="center">Educational Content on the Lua Programming Language</h2>
 
@@ -31,7 +31,7 @@
 ---
 
 <details>
-<summary style="font-size: 1.4em; font-weight: bold; padding: 15px; background: #667eea; color: white; border-radius: 10px; cursor: pointer; margin: 10px 0;"><strong>🎨 How to Use Qompass AI CSS</strong></summary>
+<summary style="font-size: 1.4em; font-weight: bold; padding: 15px; background: #667eea; color: white; border-radius: 10px; cursor: pointer; margin: 10px 0;"><strong>🌕 How to Use Qompass AI Lua</strong></summary>
 <blockquote style="font-size: 1.2em; line-height: 1.8; padding: 25px; background: #f8f9fa; border-left: 6px solid #667eea; border-radius: 8px; margin: 15px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
 
 </blockquote>

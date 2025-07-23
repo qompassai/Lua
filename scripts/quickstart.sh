@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 # qompassai/Lua/scripts/quickstart.sh
-# Qompass AI Diver · Lua + LuaRocks Quick‑Start
+# Qompass AI Diver Lua Quick‑Start
 # Copyright (C) 2025 Qompass AI, All rights reserved
 # --------------------------------------------------
 set -euo pipefail
-
 PREFIX="$HOME/.local"
 mkdir -p "$PREFIX/bin"
 NEEDED_TOOLS=(git curl tar make clang)
@@ -21,13 +20,11 @@ need_tool() {
     return 1
   fi
 }
-
 for tool in "${NEEDED_TOOLS[@]}"; do
   if ! need_tool "$tool"; then
     MISSING+=("$tool")
   fi
 done
-
 if [[ ${#MISSING[@]} -gt 0 ]]; then
   echo "\n⚠  The following required tools are missing: ${MISSING[*]}"
   if command -v pacman >/dev/null 2>&1 && command -v sudo >/dev/null 2>&1; then
@@ -133,7 +130,6 @@ install_luarocks() {
   popd >/dev/null
   rm -rf "/tmp/luarocks-$LUAROCKS_VERSION"
 }
-
 cd /tmp
 for v in "${VERSIONS[@]}"; do
   if [[ $v == luajit ]]; then
@@ -147,7 +143,6 @@ for v in "${VERSIONS[@]}"; do
     install_luarocks "$PREFIX/luajit"
     continue
   fi
-
   echo -e "\n=== Lua $v ==="
   curl -fsSLO "https://www.lua.org/ftp/lua-$v.tar.gz"
   tar xf "lua-$v.tar.gz" && rm "lua-$v.tar.gz"
@@ -162,7 +157,6 @@ for v in "${VERSIONS[@]}"; do
   ln -sf "$dest/bin/luac" "$PREFIX/bin/luac$short"
   popd >/dev/null && rm -rf "lua-$v"
   install_luarocks "$dest"
-
   cat >"$dest/lib/pkgconfig/lua$short.pc" <<EOF
 prefix=$dest
 exec_prefix=\${prefix}

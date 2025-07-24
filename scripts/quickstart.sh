@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # qompassai/Lua/scripts/quickstart.sh
 # Qompass AI Diver Lua Quick‑Start
 # Copyright (C) 2025 Qompass AI, All rights reserved
@@ -6,7 +6,7 @@
 set -euo pipefail
 PREFIX="$HOME/.local"
 mkdir -p "$PREFIX/bin"
-NEEDED_TOOLS=(git curl tar make clang)
+NEEDED_TOOLS=(git curl tar make clang bash)
 MISSING=()
 need_tool() {
   local t=$1
@@ -26,7 +26,7 @@ for tool in "${NEEDED_TOOLS[@]}"; do
   fi
 done
 if [[ ${#MISSING[@]} -gt 0 ]]; then
-  echo "\n⚠  The following required tools are missing: ${MISSING[*]}"
+  printf '\n⚠  The following required tools are missing: %s\n' "${MISSING[*]}"
   if command -v pacman >/dev/null 2>&1 && command -v sudo >/dev/null 2>&1; then
     echo "→ Attempting to install them system‑wide with sudo pacman -S --needed ${MISSING[*]}"
     if sudo -n true 2>/dev/null; then
@@ -80,7 +80,6 @@ else
     esac
   done
 fi
-
 LUAROCKS_VERSION="3.12.1"
 DEFAULT_IMPL="luajit"
 JOBS=$(nproc 2>/dev/null || sysctl -n hw.ncpu || echo 4)
@@ -125,7 +124,8 @@ install_luarocks() {
     --with-lua-lib="$lua_prefix/lib"
   make -j"$JOBS"
   make install
-  local tag=$(basename "$lua_prefix" | sed 's/^lua//;s/^luajit$/jit/')
+  local tag
+  tag=$(basename "$lua_prefix" | sed 's/^lua//;s/^luajit$/jit/')
   ln -sf "$rocks_prefix/bin/luarocks" "$PREFIX/bin/luarocks$tag"
   popd >/dev/null
   rm -rf "/tmp/luarocks-$LUAROCKS_VERSION"

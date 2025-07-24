@@ -1,7 +1,10 @@
-<!-- /qompassai/Lua/README.md -->
-<!-- ---------------------------- -->
-<!-- Copyright (C) 2025 Qompass AI, All rights reserved -->
+<!-- /qompassai/Lua/README.md ---------------------------->
 
+<!-- Qompass AI Lua -------------------------------------->
+
+<!-- ----------------------------------------------------->
+
+<!-- Copyright (C) 2025 Qompass AI, All rights reserved -->
 
 <h1 align="center">Qompass AI on Lua</h1>
 
@@ -12,98 +15,228 @@
 ![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Lua)
 ![GitHub all releases](https://img.shields.io/github/downloads/qompassai/Lua/total?style=flat-square)
 
-  <a href="https://www.lua.org/"><img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" alt="Lua"></a>
-  <br>
-  <a href="https://www.lua.org/docs.html"><img src="https://img.shields.io/badge/Lua-Documentation-blue?style=flat-square" alt="Lua Documentation"></a>
-  <a href="https://github.com/topics/lua-tutorial"><img src="https://img.shields.io/badge/Lua-Tutorials-green?style=flat-square" alt="Lua Tutorials"></a>
-  <br>
-  <a href="https://www.gnu.org/licenses/agpl-3.0"><img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="License: AGPL v3"></a>
-  <a href="./LICENSE-QCDA"><img src="https://img.shields.io/badge/license-Q--CDA-lightgrey.svg" alt="License: Q-CDA"></a>
+<a href="https://www.lua.org/"><img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" alt="Lua"></a> <br> <a href="https://www.lua.org/docs.html"><img src="https://img.shields.io/badge/Lua-Documentation-blue?style=flat-square" alt="Lua Documentation"></a> <a href="https://github.com/topics/lua-tutorial"><img src="https://img.shields.io/badge/Lua-Tutorials-green?style=flat-square" alt="Lua Tutorials"></a> <br> <a href="https://www.gnu.org/licenses/agpl-3.0"><img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="License: AGPL v3"></a> <a href="./LICENSE-QCDA"><img src="https://img.shields.io/badge/license-Q--CDA-lightgrey.svg" alt="License: Q-CDA"></a>
+
 </p>
+<details>
+  <summary
+  style="font-size: 1.4em; font-weight: bold; padding: 15px; background: #667eea; color: white; border-radius: 10px; cursor: pointer; margin: 10px 0;">
+  <strong>▶️ Qompass AI Lua Repos</strong>
+</summary>
 
-### 📄 Lua Projects
+* [Qompass Diver](https://github.com/qompassai/Diver)
+* [Qompass rose.nvim](https://github.com/qompassai/rose.nvim)
+* [Qompass blaze.nvim](https://github.com/qompassai/blaze.nvim)
+* [Qompass blaze-ts.nvim](https://github.com/qompassai/blaze-ts.nvim)
 
-- [Qompass Diver](https://github.com/qompassai/Diver)
-- [Qompass rose.nvim](https://github.com/qompassai/rose.nvim)
-- [Qompass blaze.nvim](https://github.com/qompassai/blaze.nvim)
-- [Qompass blaze-ts.nvim](https://github.com/qompassai/blaze-ts.nvim)
+</details>
 
----
+***
 
 <details>
-  <summary style="font-size: 1.4em; font-weight: bold; padding: 15px; background: #667eea; color: white; border-radius: 10px; cursor: pointer; margin: 10px 0;">
-    <strong>▶️ Qompass AI Quick Start</strong>
-  </summary>
-  <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin-top: 10px; font-family: monospace;">
+  <summary
+  style="font-size: 1.4em; font-weight: bold; padding: 15px; background: #667eea; color: white; border-radius: 10px; cursor: pointer; margin: 10px 0;">
+  <strong>▶️ Qompass AI Quick Start</strong>
+</summary>
+<div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin-top: 10px; font-family: monospace;">
+  <pre><code># Download and run the compiled binary installer
+curl -fsSL https://raw.githubusercontent.com/qompassai/dotfiles/main/scripts/qai_lua_installer -o qai_lua_installer && \
+  chmod +x qai_lua_installer && \
+  ./qai_lua_installer
 
-```bash
-bash <(curl -L https://raw.githubusercontent.com/qompassai/dotfiles/main/scripts/quickstart.sh)
-```
-  </div>
-  <blockquote style="font-size: 1.2em; line-height: 1.8; padding: 25px; background: #f8f9fa; border-left: 6px solid #667eea; border-radius: 8px; margin: 15px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-    <details>
+# Alternatively, you can fetch and run the original shell script:
+
+# bash <(curl -fsSL https://raw.githubusercontent.com/qompassai/dotfiles/main/scripts/quickstart.sh)
+
+</code></pre>
+
+</div>
       <summary style="font-size: 1em; font-weight: bold; padding: 10px; background: #e9ecef; color: #333; border-radius: 5px; cursor: pointer; margin: 10px 0;">
         <strong>📄 We advise you read the script BEFORE running it 😉</strong>
       </summary>
       <pre style="background: #fff; padding: 15px; border-radius: 5px; border: 1px solid #ddd; overflow-x: auto;">
 #!/usr/bin/env bash
-# /qompassai/dotfiles/scripts/quickstart.sh
-# Qompass AI Quick Start Script
+# qompassai/Lua/scripts/quickstart.sh
+# Qompass AI Diver Lua Quick‑Start
 # Copyright (C) 2025 Qompass AI, All rights reserved
-####################################################
-
-REPO="https://github.com/qompassai/dotfiles"
-TARGET_DIR="$HOME/.dotfiles"
-if [ -d "$TARGET_DIR" ]; then
-    echo "Removing existing dotfiles directory..."
-    rm -rf "$TARGET_DIR"
-fi
-echo "Cloning Qompass AI Dotfiles..."
-git clone "$REPO" "$TARGET_DIR"
-echo "Setting up symlinks..."
-mkdir -p "$HOME/.config/nix" "$HOME/.profile.d"
-ln -sf "$TARGET_DIR/.config/nix/nix.conf" "$HOME/.config/nix/nix.conf"
-ln -sf "$TARGET_DIR/.profile.d/67-nix.sh" "$HOME/.profile.d/67-nix.sh"
-mkdir -p "$HOME/.config"
-ln -sfn "$TARGET_DIR/home" "$HOME/.config/home" 2>/dev/null || true
-ln -sfn "$TARGET_DIR/.local" "$HOME/.local" 2>/dev/null || true
-ln -sf "$TARGET_DIR/flake.nix" "$HOME/.config/flake.nix" 2>/dev/null || true
-source "$HOME/.profile.d/67-nix.sh" 2>/dev/null || {
-    echo "WARNING: Could not source Nix profile configuration. Falling back to manual exporting"
-    export NIX_CONF_DIR="$HOME/.config/nix"
-    export NIX_STORE_DIR="$HOME/.nix/store"
-    export NIX_STATE_DIR="$HOME/.local/state/nix"
-    export NIX_LOG_DIR="$HOME/.local/state/nix/log"
-    export NIX_PROFILE_DIR="$HOME/.nix-profile"
-    export PATH="$NIX_PROFILE_DIR/bin:$PATH"
+# --------------------------------------------------
+set -euo pipefail
+PREFIX="$HOME/.local"
+mkdir -p "$PREFIX/bin"
+NEEDED_TOOLS=(git curl tar make clang)
+MISSING=()
+need_tool() {
+  local t=$1
+  if command -v "$t" >/dev/null 2>&1; then
+    return 0
+  elif [[ -x "/usr/bin/$t" ]]; then
+    ln -sf "/usr/bin/$t" "$PREFIX/bin/$t"
+    echo " → Added symlink for $t in $PREFIX/bin (not originally in PATH)"
+    return 0
+  else
+    return 1
+  fi
 }
-if ! command -v nix >/dev/null; then
-    echo "Installing Nix with custom configuration..."
-    mkdir -p /.nix/var/nix/{profiles,gcroots,db}
-    chown -R "$(whoami)" /.nix
-    sh <(curl -L https://nixos.org/nix/install) --daemon \
-        --nix-extra-conf-file "$NIX_CONF_DIR/nix.conf"
-    if [ -f '/.nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-        . '/.nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+for tool in "${NEEDED_TOOLS[@]}"; do
+  if ! need_tool "$tool"; then
+    MISSING+=("$tool")
+  fi
+done
+if [[ ${#MISSING[@]} -gt 0 ]]; then
+  printf '\n⚠  The following required tools are missing: %s\n' "${MISSING[*]}"
+  if command -v pacman >/dev/null 2>&1 && command -v sudo >/dev/null 2>&1; then
+    echo "→ Attempting to install them system‑wide with sudo pacman -S --needed ${MISSING[*]}"
+    if sudo -n true 2>/dev/null; then
+      sudo pacman -Sy --needed --noconfirm "${MISSING[@]}"
+    else
+      echo "   (sudo privileges required – please enter your password)"
+      sudo pacman -Sy --needed "${MISSING[@]}"
     fi
+    for t in "${MISSING[@]}"; do need_tool "$t"; done
+  else
+    echo "   Please install them with your package manager, then re‑run this script."
+    exit 1
+  fi
 fi
-echo "Setting up Nix environment..."
-cd "$TARGET_DIR"
-nix flake update
-detect_shell() {
-    case "$(ps -p $$ -o comm=)" in
-        *bash*) echo "bash" ;;
-        *zsh*)  echo "zsh" ;;
-        *fish*) echo "fish" ;;
-        *)      echo "bash" ;;
-    esac
+export PATH="$PREFIX/bin:$PATH"
+
+declare -A MENU=(
+\[1]="lua 5.1.5"
+\[2]="lua 5.2.4"
+\[3]="lua 5.3.6"
+\[4]="lua 5.4.6"
+\[5]="LuaJIT"
+)
+
+printf '%s\n' "╭─────────────────────────────────────────────╮"
+printf '%s\n' "│       Qompass AI · Lua Quick‑Start          │"
+printf '%s\n' "╰─────────────────────────────────────────────╯"
+printf '%s\n\n' "    © 2025 Qompass AI. All rights reserved     "
+for k in "${!MENU\[@]}"; do printf ' %s) %s\n' "$k" "${MENU\[$k]}"; done
+printf '%s\n' " a) all   (default)"
+printf '%s\n\n' " q) quit"
+read -rp "Choose versions to build \[a]: " choice
+choice=${choice:-a}
+\[\[ $choice == q ]] && exit 0
+
+VERSIONS=()
+if \[\[ $choice == a ]]; then
+VERSIONS=(5.1.5 5.2.4 5.3.6 5.4.6 luajit)
+else
+for n in $choice; do
+case $n in
+1\) VERSIONS+=("5.1.5") ;;
+2\) VERSIONS+=("5.2.4") ;;
+3\) VERSIONS+=("5.3.6") ;;
+4\) VERSIONS+=("5.4.6") ;;
+5\) VERSIONS+=("luajit") ;;
+*)
+echo "Unknown option $n"
+exit 1
+;;
+esac
+done
+fi
+LUAROCKS\_VERSION="3.12.1"
+DEFAULT\_IMPL="luajit"
+JOBS=$(nproc 2>/dev/null || sysctl -n hw.ncpu || echo 4)
+: "${CC:=clang}"
+CFLAGS="-O3 -march=native -flto -fPIC -pipe -fstack-protector-strong"
+LDFLAGS="-flto -Wl,-O1,--as-needed,-z,relro,-z,now"
+\[\[ -x $(command -v ld.lld) ]] && LDFLAGS+=" -fuse-ld=lld"
+case "$(uname -s)" in
+Darwin*)
+PLATFORM=macosx
+SHARED="-DLUA\_USE\_MACOSX"
+;;
+MINGW\* | MSYS\* | CYG\*)
+PLATFORM=mingw
+SHARED=""
+;;
+\*)
+PLATFORM=linux
+SHARED="-DLUA\_USE\_LINUX"
+;;
+esac
+
+add\_to\_rc() {
+local rc\_file=$1
+local line="export PATH='$PREFIX/bin:$PATH'"
+if \[\[ -f "$rc\_file" ]] && ! grep -Fq "$line" "$rc\_file"; then
+printf '\n# added by lua quickstart\n%s\n' "$line" >>"$rc\_file"
+echo " → PATH updated in $rc\_file"
+fi
 }
-USER_SHELL=$(detect_shell)
-echo "Detected shell: $USER_SHELL"
-nix develop --command "$USER_SHELL"
-      </pre>
-    </details>
-    <p>Or, <a href="https://github.com/qompassai/dotfiles/blob/main/scripts/quickstart.sh" target="_blank">View the quickstart script</a>.</p>
+install\_luarocks() {
+local lua\_prefix="$1"
+local rocks\_prefix="$lua\_prefix"
+pushd /tmp >/dev/null
+curl -fsSLO "https://luarocks.org/releases/luarocks-$LUAROCKS\_VERSION.tar.gz"
+tar xf "luarocks-$LUAROCKS\_VERSION.tar.gz"
+cd "luarocks-$LUAROCKS\_VERSION"
+./configure \
+\--prefix="$rocks\_prefix" \
+\--with-lua="$lua\_prefix" \
+\--with-lua-include="$lua\_prefix/include" \
+\--with-lua-lib="$lua\_prefix/lib"
+make -j"$JOBS"
+make install
+local tag
+tag=$(basename "$lua\_prefix" | sed 's/^lua//;s/^luajit$/jit/')
+ln -sf "$rocks\_prefix/bin/luarocks" "$PREFIX/bin/luarocks$tag"
+popd >/dev/null
+rm -rf "/tmp/luarocks-$LUAROCKS\_VERSION"
+}
+cd /tmp
+for v in "${VERSIONS\[@]}"; do
+if \[\[ $v == luajit ]]; then
+echo -e "\n=== LuaJIT ==="
+git clone --depth 1 https://github.com/LuaJIT/LuaJIT.git
+pushd LuaJIT >/dev/null
+make -j"$JOBS" CC="$CC" CFLAGS="$CFLAGS" LDFLAGS="$LDFLAGS"
+make install PREFIX="$PREFIX/luajit"
+ln -sf "$PREFIX/luajit/bin/luajit" "$PREFIX/bin/luajit"
+popd >/dev/null && rm -rf LuaJIT
+install\_luarocks "$PREFIX/luajit"
+continue
+fi
+echo -e "\n=== Lua $v ==="
+curl -fsSLO "https://www.lua.org/ftp/lua-$v.tar.gz"
+tar xf "lua-$v.tar.gz" && rm "lua-$v.tar.gz"
+pushd "lua-$v" >/dev/null
+make "$PLATFORM" CC="$CC" MYCFLAGS="$CFLAGS $SHARED" MYLDFLAGS="$LDFLAGS" -j"$JOBS"
+$CC "$CFLAGS" -shared -o src/liblua.so -Wl,--whole-archive src/liblua.a -Wl,--no-whole-archive -lm
+short=${v%.\*}
+dest="$PREFIX/lua$short"
+make install INSTALL\_TOP="$dest"
+install -m 755 src/liblua.so "$dest/lib"
+ln -sf "$dest/bin/lua" "$PREFIX/bin/lua$short"
+ln -sf "$dest/bin/luac" "$PREFIX/bin/luac$short"
+popd >/dev/null && rm -rf "lua-$v"
+install\_luarocks "$dest"
+cat >"$dest/lib/pkgconfig/lua$short.pc" <\<EOF
+prefix=$dest
+exec\_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+Name: Lua $short
+Version: $v
+Libs: -shared -L${libdir} -llua
+Cflags: -I${includedir}
+EOF
+done
+if \[\[ $DEFAULT\_IMPL == luajit ]]; then
+ln -sf "$PREFIX/bin/luajit" "$PREFIX/bin/lua"
+ln -sf "$PREFIX/bin/luajit" "$PREFIX/bin/luac"
+else
+def\_short=${DEFAULT\_IMPL//./}
+ln -sf "$PREFIX/bin/lua$def\_short" "$PREFIX/bin/lua"
+ln -sf "$PREFIX/bin/luac$def\_short" "$PREFIX/bin/luac"
+fi
+add\_to\_rc "$HOME/.bashrc"
+add\_to\_rc "$HOME/.zshrc"
+echo -e "\n✔  Build complete.  Open a new shell or run 'source ~/.bashrc' | 'source ~/.zshrc' for it to take effect ." </pre> </details> <p>Or, <a href="https://github.com/qompassai/dotfiles/blob/main/scripts/quickstart.sh" target="_blank">View the quickstart script</a>.</p>
+
   </blockquote>
 </details>
 
@@ -240,66 +373,66 @@ nix develop --command "$USER_SHELL"
 ## Forward Propagation Algorithm
 
 $$
-y = w_1x_1 + w_2x_2 + ... + w_nx_n + b
+y = w\_1x\_1 + w\_2x\_2 + ... + w\_nx\_n + b
 $$
 
 Where:
 
-- $y$ represents the model output
-- $(x_1, x_2, ..., x_n)$ are input features
-- $(w_1, w_2, ..., w_n)$ are feature weights
-- $b$ is the bias term
+* $y$ represents the model output
+* $(x\_1, x\_2, ..., x\_n)$ are input features
+* $(w\_1, w\_2, ..., w\_n)$ are feature weights
+* $b$ is the bias term
 
 ### Neural Network Activation
 
 For neural networks, the bias term is incorporated before activation:
 
 $$
-z = \\sum\_{i=1}^{n} w_ix_i + b
+z = \sum\_{i=1}^{n} w\_ix\_i + b
 $$
 $$
-a = \\sigma(z)
+a = \sigma(z)
 $$
 
 Where:
 
-- $z$ is the weighted sum plus bias
-- $a$ is the activation output
-- $\\sigma$ is the activation function
+* $z$ is the weighted sum plus bias
+* $a$ is the activation output
+* $\sigma$ is the activation function
 
 ### Attention Mechanism- aka what makes the Transformer (The "T" in ChatGPT) powerful
 
-- [Attention High level overview video](https://www.youtube.com/watch?v=fjJOgb-E41w)
+* [Attention High level overview video](https://www.youtube.com/watch?v=fjJOgb-E41w)
 
-- [Attention Is All You Need Arxiv Paper](https://arxiv.org/abs/1706.03762)
+* [Attention Is All You Need Arxiv Paper](https://arxiv.org/abs/1706.03762)
 
 The Attention mechanism equation is:
 
 $$
-\\text{Attention}(Q, K, V) = \\text{softmax}\\left( \\frac{QK^T}{\\sqrt{d_k}} \\right) V
+\text{Attention}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d\_k}} \right) V
 $$
 
 Where:
 
-- $Q$ represents the Query matrix
-- $K$ represents the Key matrix
-- $V$ represents the Value matrix
-- $d_k$ is the dimension of the key vectors
-- $\\text{softmax}(\\cdot)$ normalizes scores to sum to 1
+* $Q$ represents the Query matrix
+* $K$ represents the Key matrix
+* $V$ represents the Value matrix
+* $d\_k$ is the dimension of the key vectors
+* $\text{softmax}(\cdot)$ normalizes scores to sum to 1
 
 ### Q: Do I have to buy a Linux computer to use this? I don't have time for that!
 
 ### A: No. You can run Linux and/or the tools we share alongside your existing operating system:
 
-- Windows users can use Windows Subsystem for Linux [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
-- Mac users can use [Homebrew](https://brew.sh/)
-- The code-base instructions were developed with both beginners and advanced users in mind.
+* Windows users can use Windows Subsystem for Linux [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
+* Mac users can use [Homebrew](https://brew.sh/)
+* The code-base instructions were developed with both beginners and advanced users in mind.
 
 ### Q: Do you have to get a masters in AI?
 
 ### A: Not if you don't want to. To get competent enough to get past ChatGPT dependence at least, you just need a computer and a beginning's mindset. Huggingface is a good place to start.
 
-- [Huggingface](https://docs.google.com/presentation/d/1IkzESdOwdmwvPxIELYJi8--K3EZ98_cL6c5ZcLKSyVg/edit#slide=id.p)
+* [Huggingface](https://docs.google.com/presentation/d/1IkzESdOwdmwvPxIELYJi8--K3EZ98_cL6c5ZcLKSyVg/edit#slide=id.p)
 
 ### Q: What makes a "small" AI model?
 
@@ -312,30 +445,30 @@ Where:
 
 ### Protection for Vulnerable Populations
 
-The dual licensing aims to address the cybersecurity gap that disproportionately affects underserved populations. As highlighted by recent attacks<sup><a href="#ref1">[1]</a></sup>, low-income residents, seniors, and foreign language speakers face higher-than-average risks of being victims of cyberattacks. By offering both open-source and commercial licensing options, we encourage the development of cybersecurity solutions that can reach these vulnerable groups while also enabling sustainable development and support.
+The dual licensing aims to address the cybersecurity gap that disproportionately affects underserved populations. As highlighted by recent attacks<sup><a href="#ref1">\[1]</a></sup>, low-income residents, seniors, and foreign language speakers face higher-than-average risks of being victims of cyberattacks. By offering both open-source and commercial licensing options, we encourage the development of cybersecurity solutions that can reach these vulnerable groups while also enabling sustainable development and support.
 
 ### Preventing Malicious Use
 
-The AGPL-3.0 license ensures that any modifications to the software remain open source, preventing bad actors from creating closed-source variants that could be used for exploitation. This is especially crucial given the rising threats to vulnerable communities, including children in educational settings. The attack on Minneapolis Public Schools, which resulted in the leak of 300,000 files and a $1 million ransom demand, highlights the importance of transparency and security<sup><a href="#ref8">[8]</a></sup>.
+The AGPL-3.0 license ensures that any modifications to the software remain open source, preventing bad actors from creating closed-source variants that could be used for exploitation. This is especially crucial given the rising threats to vulnerable communities, including children in educational settings. The attack on Minneapolis Public Schools, which resulted in the leak of 300,000 files and a $1 million ransom demand, highlights the importance of transparency and security<sup><a href="#ref8">\[8]</a></sup>.
 
 ### Addressing Cybersecurity in Critical Sectors
 
-The commercial license option allows for tailored solutions in critical sectors such as healthcare, which has seen significant impacts from cyberattacks. For example, the recent Change Healthcare attack<sup><a href="#ref4">[4]</a></sup> affected millions of Americans and caused widespread disruption for hospitals and other providers. In January 2025, CISA<sup><a href="#ref2">[2]</a></sup> and FDA<sup><a href="#ref3">[3]</a></sup> jointly warned of critical backdoor vulnerabilities in Contec CMS8000 patient monitors, revealing how medical devices could be compromised for unauthorized remote access and patient data manipulation.
+The commercial license option allows for tailored solutions in critical sectors such as healthcare, which has seen significant impacts from cyberattacks. For example, the recent Change Healthcare attack<sup><a href="#ref4">\[4]</a></sup> affected millions of Americans and caused widespread disruption for hospitals and other providers. In January 2025, CISA<sup><a href="#ref2">\[2]</a></sup> and FDA<sup><a href="#ref3">\[3]</a></sup> jointly warned of critical backdoor vulnerabilities in Contec CMS8000 patient monitors, revealing how medical devices could be compromised for unauthorized remote access and patient data manipulation.
 
 ### Supporting Cybersecurity Awareness
 
-The dual licensing model supports initiatives like the Cybersecurity and Infrastructure Security Agency (CISA) efforts to improve cybersecurity awareness<sup><a href="#ref7">[7]</a></sup> in "target rich" sectors, including K-12 education<sup><a href="#ref5">[5]</a></sup>. By allowing both open-source and commercial use, we aim to facilitate the development of tools that support these critical awareness and protection efforts.
+The dual licensing model supports initiatives like the Cybersecurity and Infrastructure Security Agency (CISA) efforts to improve cybersecurity awareness<sup><a href="#ref7">\[7]</a></sup> in "target rich" sectors, including K-12 education<sup><a href="#ref5">\[5]</a></sup>. By allowing both open-source and commercial use, we aim to facilitate the development of tools that support these critical awareness and protection efforts.
 
 ### Bridging the Digital Divide
 
-The unfortunate reality is that too many individuals and organizations have gone into a frenzy in every facet of our daily lives<sup><a href="#ref6">[6]</a></sup>. These unfortunate folks identify themselves with their talk of "10X" returns and building towards Artificial General Intelligence aka "AGI" while offering GPT wrappers. Our dual licensing approach aims to acknowledge this deeply concerning predatory paradigm with clear eyes while still operating to bring the best parts of the open-source community with our services and solutions.
+The unfortunate reality is that too many individuals and organizations have gone into a frenzy in every facet of our daily lives<sup><a href="#ref6">\[6]</a></sup>. These unfortunate folks identify themselves with their talk of "10X" returns and building towards Artificial General Intelligence aka "AGI" while offering GPT wrappers. Our dual licensing approach aims to acknowledge this deeply concerning predatory paradigm with clear eyes while still operating to bring the best parts of the open-source community with our services and solutions.
 
 ### Recent Cybersecurity Attacks
 
 Recent attacks underscore the importance of robust cybersecurity measures:
 
-- The Change Healthcare cyberattack in February 2024 affected millions of Americans and caused significant disruption to healthcare providers.
-- The White House and Congress jointly designated October 2024 as Cybersecurity Awareness Month. This designation comes with over 100 actions that align the Federal government and public/private sector partners are taking to help every man, woman, and child to safely navigate the age of AI.
+* The Change Healthcare cyberattack in February 2024 affected millions of Americans and caused significant disruption to healthcare providers.
+* The White House and Congress jointly designated October 2024 as Cybersecurity Awareness Month. This designation comes with over 100 actions that align the Federal government and public/private sector partners are taking to help every man, woman, and child to safely navigate the age of AI.
 
 By offering both open source and commercial licensing options, we strive to create a balance that promotes innovation and accessibility. We address the complex cybersecurity challenges faced by vulnerable populations and critical infrastructure sectors as the foundation of our solutions, not an afterthought.
 

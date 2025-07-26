@@ -235,7 +235,9 @@ ln -sf "$PREFIX/bin/luac$def\_short" "$PREFIX/bin/luac"
 fi
 add\_to\_rc "$HOME/.bashrc"
 add\_to\_rc "$HOME/.zshrc"
-echo -e "\n✔  Build complete.  Open a new shell or run 'source ~/.bashrc' | 'source ~/.zshrc' for it to take effect ." </pre> </details> <p>Or, <a href="https://github.com/qompassai/dotfiles/blob/main/scripts/quickstart.sh" target="_blank">View the quickstart script</a>.</p>
+echo -e "\n✔  Build complete.  Open a new shell or run 'source ~/.bashrc' | 'source ~/.zshrc' for it to take effect ."</pre>
+
+</details> <p>Or, <a href="https://github.com/qompassai/Lua/blob/main/scripts/quickstart.sh" target="_blank">View the quickstart script</a>.</p>
 
   </blockquote>
 </details>
@@ -341,12 +343,12 @@ echo -e "\n✔  Build complete.  Open a new shell or run 'source ~/.bashrc' | 's
 **Monero (XMR):**
 
 <div align="center">
-  <img src="./assets/monero-qr.png" alt="Monero QR Code" width="180">
+  <h3>Support via Monero</h3>
+  <img src="./assets/monero-qr.svg" alt="Monero QR Code" width="180">
 </div>
-
-<div style="margin: 10px 0;">
-    <code>42HGspSFJQ4MjM5ZusAiKZj9JZWhfNgVraKb1eGCsHoC6QJqpo2ERCBZDhhKfByVjECernQ6KeZwFcnq8hVwTTnD8v4PzyH</code>
-  </div>
+<div style="margin: 10px 0; text-align: center;">
+  <code>42HGspSFJQ4MjM5ZusAiKZj9JZWhfNgVraKb1eGCsHoC6QJqpo2ERCBZDhhKfByVjECernQ6KeZwFcnq8hVwTTnD8v4PzyH</code>
+</div>
 
 <button onclick="navigator.clipboard.writeText('42HGspSFJQ4MjM5ZusAiKZj9JZWhfNgVraKb1eGCsHoC6QJqpo2ERCBZDhhKfByVjECernQ6KeZwFcnq8hVwTTnD8v4PzyH')" style="padding: 6px 12px; background: #FF6600; color: white; border: none; border-radius: 4px; cursor: pointer;">
     📋 Copy Address

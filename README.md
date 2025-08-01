@@ -1,37 +1,40 @@
-<!-- /qompassai/Lua/README.md ---------------------------->
-
-<!-- Qompass AI Lua -------------------------------------->
-
-<!-- ----------------------------------------------------->
-
+<!---------------- /qompassai/lua/README.md -------------->
+<!---------------------Qompass AI Lua -------------------->
 <!-- Copyright (C) 2025 Qompass AI, All rights reserved -->
+<!-- ----------------------------------------------------->
 
 <h1 align="center">Qompass AI on Lua</h1>
 
 <h2 align="center">Educational Content on the Lua Programming Language</h2>
 
-<p align="center">
 
 ![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Lua)
 ![GitHub all releases](https://img.shields.io/github/downloads/qompassai/Lua/total?style=flat-square)
-
+<p align="center">
 <a href="https://www.lua.org/"><img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" alt="Lua"></a> <br> <a href="https://www.lua.org/docs.html"><img src="https://img.shields.io/badge/Lua-Documentation-blue?style=flat-square" alt="Lua Documentation"></a> <a href="https://github.com/topics/lua-tutorial"><img src="https://img.shields.io/badge/Lua-Tutorials-green?style=flat-square" alt="Lua Tutorials"></a> <br> <a href="https://www.gnu.org/licenses/agpl-3.0"><img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="License: AGPL v3"></a> <a href="./LICENSE-QCDA"><img src="https://img.shields.io/badge/license-Q--CDA-lightgrey.svg" alt="License: Q-CDA"></a>
-
 </p>
+
 <details>
-  <summary
-  style="font-size: 1.4em; font-weight: bold; padding: 15px; background: #667eea; color: white; border-radius: 10px; cursor: pointer; margin: 10px 0;">
-  <strong>▶️ Qompass AI Lua Repos</strong>
-</summary>
+  <summary style="font-size: 1.4em; font-weight: bold; padding: 15px; background: #667eea; color: white; border-radius: 10px; cursor: pointer; margin: 10px 0;">
+    <strong>
+      <img src="https://raw.githubusercontent.com/qompassai/svg/main/assets/icons/lua/lua.svg"
+           alt="Qompass AI Lua Icon"
+           style="height: 1em; vertical-align: -0.2em; margin-right: 0.25em;" />
+      Lua Solutions
+    </strong>
+  </summary>
+  <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin-top: 10px; font-family: monospace;">
 
 * [Qompass Diver](https://github.com/qompassai/Diver)
 * [Qompass rose.nvim](https://github.com/qompassai/rose.nvim)
 * [Qompass blaze.nvim](https://github.com/qompassai/blaze.nvim)
 * [Qompass blaze-ts.nvim](https://github.com/qompassai/blaze-ts.nvim)
+* [Qompass QLuV](https://github.com/qompassai/qluv)
+
+ </div>
 
 </details>
 
-***
 
 <details>
   <summary
@@ -59,7 +62,7 @@ curl -fsSL https://raw.githubusercontent.com/qompassai/dotfiles/main/scripts/qai
 # qompassai/Lua/scripts/quickstart.sh
 # Qompass AI Diver Lua Quick‑Start
 # Copyright (C) 2025 Qompass AI, All rights reserved
-# --------------------------------------------------
+#################################################### 
 set -euo pipefail
 PREFIX="$HOME/.local"
 mkdir -p "$PREFIX/bin"
@@ -99,7 +102,6 @@ if [[ ${#MISSING[@]} -gt 0 ]]; then
   fi
 fi
 export PATH="$PREFIX/bin:$PATH"
-
 declare -A MENU=(
 \[1]="lua 5.1.5"
 \[2]="lua 5.2.4"
@@ -107,7 +109,6 @@ declare -A MENU=(
 \[4]="lua 5.4.6"
 \[5]="LuaJIT"
 )
-
 printf '%s\n' "╭─────────────────────────────────────────────╮"
 printf '%s\n' "│       Qompass AI · Lua Quick‑Start          │"
 printf '%s\n' "╰─────────────────────────────────────────────╯"
@@ -118,7 +119,6 @@ printf '%s\n\n' " q) quit"
 read -rp "Choose versions to build \[a]: " choice
 choice=${choice:-a}
 \[\[ $choice == q ]] && exit 0
-
 VERSIONS=()
 if \[\[ $choice == a ]]; then
 VERSIONS=(5.1.5 5.2.4 5.3.6 5.4.6 luajit)
@@ -158,7 +158,6 @@ PLATFORM=linux
 SHARED="-DLUA\_USE\_LINUX"
 ;;
 esac
-
 add\_to\_rc() {
 local rc\_file=$1
 local line="export PATH='$PREFIX/bin:$PATH'"
@@ -344,7 +343,7 @@ echo -e "\n✔  Build complete.  Open a new shell or run 'source ~/.bashrc' | 's
 
 <div align="center">
   <h3>Support via Monero</h3>
-  <img src="./assets/monero-qr.svg" alt="Monero QR Code" width="180">
+    <img src="https://www.github.com/qompassai/svg/assets/monero-qr.svg" alt="Monero QR Code" width="180">
 </div>
 <div style="margin: 10px 0; text-align: center;">
   <code>42HGspSFJQ4MjM5ZusAiKZj9JZWhfNgVraKb1eGCsHoC6QJqpo2ERCBZDhhKfByVjECernQ6KeZwFcnq8hVwTTnD8v4PzyH</code>
@@ -375,22 +374,22 @@ echo -e "\n✔  Build complete.  Open a new shell or run 'source ~/.bashrc' | 's
 ## Forward Propagation Algorithm
 
 $$
-y = w\_1x\_1 + w\_2x\_2 + ... + w\_nx\_n + b
+y = w_1x_1 + w_2x_2 + ... + w_nx_n + b
 $$
 
 Where:
 
-* $y$ represents the model output
-* $(x\_1, x\_2, ..., x\_n)$ are input features
-* $(w\_1, w\_2, ..., w\_n)$ are feature weights
-* $b$ is the bias term
+- $y$ represents the model output
+- $(x_1, x_2, ..., x_n)$ are input features
+- $(w_1, w_2, ..., w_n)$ are feature weights
+- $b$ is the bias term
 
 ### Neural Network Activation
 
 For neural networks, the bias term is incorporated before activation:
 
 $$
-z = \sum\_{i=1}^{n} w\_ix\_i + b
+z = \sum_{i=1}^{n} w_ix_i + b
 $$
 $$
 a = \sigma(z)
@@ -398,43 +397,43 @@ $$
 
 Where:
 
-* $z$ is the weighted sum plus bias
-* $a$ is the activation output
-* $\sigma$ is the activation function
+- $z$ is the weighted sum plus bias
+- $a$ is the activation output
+- $\sigma$ is the activation function
 
 ### Attention Mechanism- aka what makes the Transformer (The "T" in ChatGPT) powerful
 
-* [Attention High level overview video](https://www.youtube.com/watch?v=fjJOgb-E41w)
+- [Attention High level overview video](https://www.youtube.com/watch?v=fjJOgb-E41w)
 
-* [Attention Is All You Need Arxiv Paper](https://arxiv.org/abs/1706.03762)
+- [Attention Is All You Need Arxiv Paper](https://arxiv.org/abs/1706.03762)
 
 The Attention mechanism equation is:
 
 $$
-\text{Attention}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d\_k}} \right) V
+Attention(Q, K, V) = softmax(\frac{QK^T}{\sqrt{d_k}})V
 $$
 
 Where:
 
-* $Q$ represents the Query matrix
-* $K$ represents the Key matrix
-* $V$ represents the Value matrix
-* $d\_k$ is the dimension of the key vectors
-* $\text{softmax}(\cdot)$ normalizes scores to sum to 1
+- $Q$ represents the Query matrix
+- $K$ represents the Key matrix
+- $V$ represents the Value matrix
+- $d_k$ is the dimension of the key vectors
+- $\text{softmax}(\cdot)$ normalizes scores to sum to 1
 
 ### Q: Do I have to buy a Linux computer to use this? I don't have time for that!
 
 ### A: No. You can run Linux and/or the tools we share alongside your existing operating system:
 
-* Windows users can use Windows Subsystem for Linux [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
-* Mac users can use [Homebrew](https://brew.sh/)
-* The code-base instructions were developed with both beginners and advanced users in mind.
+- Windows users can use Windows Subsystem for Linux [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
+- Mac users can use [Homebrew](https://brew.sh/)
+- The code-base instructions were developed with both beginners and advanced users in mind.
 
 ### Q: Do you have to get a masters in AI?
 
 ### A: Not if you don't want to. To get competent enough to get past ChatGPT dependence at least, you just need a computer and a beginning's mindset. Huggingface is a good place to start.
 
-* [Huggingface](https://docs.google.com/presentation/d/1IkzESdOwdmwvPxIELYJi8--K3EZ98_cL6c5ZcLKSyVg/edit#slide=id.p)
+- [Huggingface](https://docs.google.com/presentation/d/1IkzESdOwdmwvPxIELYJi8--K3EZ98_cL6c5ZcLKSyVg/edit#slide=id.p)
 
 ### Q: What makes a "small" AI model?
 
@@ -447,30 +446,30 @@ Where:
 
 ### Protection for Vulnerable Populations
 
-The dual licensing aims to address the cybersecurity gap that disproportionately affects underserved populations. As highlighted by recent attacks<sup><a href="#ref1">\[1]</a></sup>, low-income residents, seniors, and foreign language speakers face higher-than-average risks of being victims of cyberattacks. By offering both open-source and commercial licensing options, we encourage the development of cybersecurity solutions that can reach these vulnerable groups while also enabling sustainable development and support.
+The dual licensing aims to address the cybersecurity gap that disproportionately affects underserved populations. As highlighted by recent attacks<sup><a href="#ref1">[1]</a></sup>, low-income residents, seniors, and foreign language speakers face higher-than-average risks of being victims of cyberattacks. By offering both open-source and commercial licensing options, we encourage the development of cybersecurity solutions that can reach these vulnerable groups while also enabling sustainable development and support.
 
 ### Preventing Malicious Use
 
-The AGPL-3.0 license ensures that any modifications to the software remain open source, preventing bad actors from creating closed-source variants that could be used for exploitation. This is especially crucial given the rising threats to vulnerable communities, including children in educational settings. The attack on Minneapolis Public Schools, which resulted in the leak of 300,000 files and a $1 million ransom demand, highlights the importance of transparency and security<sup><a href="#ref8">\[8]</a></sup>.
+The AGPL-3.0 license ensures that any modifications to the software remain open source, preventing bad actors from creating closed-source variants that could be used for exploitation. This is especially crucial given the rising threats to vulnerable communities, including children in educational settings. The attack on Minneapolis Public Schools, which resulted in the leak of 300,000 files and a $1 million ransom demand, highlights the importance of transparency and security<sup><a href="#ref8">[8]</a></sup>.
 
 ### Addressing Cybersecurity in Critical Sectors
 
-The commercial license option allows for tailored solutions in critical sectors such as healthcare, which has seen significant impacts from cyberattacks. For example, the recent Change Healthcare attack<sup><a href="#ref4">\[4]</a></sup> affected millions of Americans and caused widespread disruption for hospitals and other providers. In January 2025, CISA<sup><a href="#ref2">\[2]</a></sup> and FDA<sup><a href="#ref3">\[3]</a></sup> jointly warned of critical backdoor vulnerabilities in Contec CMS8000 patient monitors, revealing how medical devices could be compromised for unauthorized remote access and patient data manipulation.
+The commercial license option allows for tailored solutions in critical sectors such as healthcare, which has seen significant impacts from cyberattacks. For example, the recent Change Healthcare attack<sup><a href="#ref4">[4]</a></sup> affected millions of Americans and caused widespread disruption for hospitals and other providers. In January 2025, CISA<sup><a href="#ref2">[2]</a></sup> and FDA<sup><a href="#ref3">[3]</a></sup> jointly warned of critical backdoor vulnerabilities in Contec CMS8000 patient monitors, revealing how medical devices could be compromised for unauthorized remote access and patient data manipulation.
 
 ### Supporting Cybersecurity Awareness
 
-The dual licensing model supports initiatives like the Cybersecurity and Infrastructure Security Agency (CISA) efforts to improve cybersecurity awareness<sup><a href="#ref7">\[7]</a></sup> in "target rich" sectors, including K-12 education<sup><a href="#ref5">\[5]</a></sup>. By allowing both open-source and commercial use, we aim to facilitate the development of tools that support these critical awareness and protection efforts.
+The dual licensing model supports initiatives like the Cybersecurity and Infrastructure Security Agency (CISA) efforts to improve cybersecurity awareness<sup><a href="#ref7">[7]</a></sup> in "target rich" sectors, including K-12 education<sup><a href="#ref5">[5]</a></sup>. By allowing both open-source and commercial use, we aim to facilitate the development of tools that support these critical awareness and protection efforts.
 
 ### Bridging the Digital Divide
 
-The unfortunate reality is that too many individuals and organizations have gone into a frenzy in every facet of our daily lives<sup><a href="#ref6">\[6]</a></sup>. These unfortunate folks identify themselves with their talk of "10X" returns and building towards Artificial General Intelligence aka "AGI" while offering GPT wrappers. Our dual licensing approach aims to acknowledge this deeply concerning predatory paradigm with clear eyes while still operating to bring the best parts of the open-source community with our services and solutions.
+The unfortunate reality is that too many individuals and organizations have gone into a frenzy in every facet of our daily lives<sup><a href="#ref6">[6]</a></sup>. These unfortunate folks identify themselves with their talk of "10X" returns and building towards Artificial General Intelligence aka "AGI" while offering GPT wrappers. Our dual licensing approach aims to acknowledge this deeply concerning predatory paradigm with clear eyes while still operating to bring the best parts of the open-source community with our services and solutions.
 
 ### Recent Cybersecurity Attacks
 
 Recent attacks underscore the importance of robust cybersecurity measures:
 
-* The Change Healthcare cyberattack in February 2024 affected millions of Americans and caused significant disruption to healthcare providers.
-* The White House and Congress jointly designated October 2024 as Cybersecurity Awareness Month. This designation comes with over 100 actions that align the Federal government and public/private sector partners are taking to help every man, woman, and child to safely navigate the age of AI.
+- The Change Healthcare cyberattack in February 2024 affected millions of Americans and caused significant disruption to healthcare providers.
+- The White House and Congress jointly designated October 2024 as Cybersecurity Awareness Month. This designation comes with over 100 actions that align the Federal government and public/private sector partners are taking to help every man, woman, and child to safely navigate the age of AI.
 
 By offering both open source and commercial licensing options, we strive to create a balance that promotes innovation and accessibility. We address the complex cybersecurity challenges faced by vulnerable populations and critical infrastructure sectors as the foundation of our solutions, not an afterthought.
 

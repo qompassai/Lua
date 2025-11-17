@@ -1,4 +1,4 @@
-<!---------------- /qompassai/lua/README.md -------------->
+<!--------------- /qompassai/lua/README.md --------------->
 <!---------------------Qompass AI Lua -------------------->
 <!-- Copyright (C) 2025 Qompass AI, All rights reserved -->
 <!-- ----------------------------------------------------->

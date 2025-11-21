@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # qompassai/Lua/scripts/quickstart.sh
 # Qompass AI Diver Lua Quick‑Start
 # Copyright (C) 2025 Qompass AI, All rights reserved
@@ -42,7 +42,6 @@ if [[ ${#MISSING[@]} -gt 0 ]]; then
   fi
 fi
 export PATH="$PREFIX/bin:$PATH"
-
 declare -A MENU=(
   [1]="lua 5.1.5"
   [2]="lua 5.2.4"
@@ -50,7 +49,6 @@ declare -A MENU=(
   [4]="lua 5.4.6"
   [5]="LuaJIT"
 )
-
 printf '%s\n' "╭─────────────────────────────────────────────╮"
 printf '%s\n' "│       Qompass AI · Lua Quick‑Start          │"
 printf '%s\n' "╰─────────────────────────────────────────────╯"
@@ -61,7 +59,6 @@ printf '%s\n\n' " q) quit"
 read -rp "Choose versions to build [a]: " choice
 choice=${choice:-a}
 [[ $choice == q ]] && exit 0
-
 VERSIONS=()
 if [[ $choice == a ]]; then
   VERSIONS=(5.1.5 5.2.4 5.3.6 5.4.6 luajit)

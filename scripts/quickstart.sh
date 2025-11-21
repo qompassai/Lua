@@ -52,16 +52,18 @@ declare -A MENU=(
 printf '%s\n' "╭─────────────────────────────────────────────╮"
 printf '%s\n' "│       Qompass AI · Lua Quick‑Start          │"
 printf '%s\n' "╰─────────────────────────────────────────────╯"
-printf '%s\n\n' "    © 2025 Qompass AI. All rights reserved     "
+printf '%s\n\n' "    © 2025 Qompass AI. All rights reserved     "
 for k in "${!MENU[@]}"; do printf ' %s) %s\n' "$k" "${MENU[$k]}"; done
-printf '%s\n' " a) all   (default)"
+printf '%s\n' " a) all"
 printf '%s\n\n' " q) quit"
-read -rp "Choose versions to build [a]: " choice
-choice=${choice:-a}
+read -rp "Choose versions to build [1]: " choice
+choice=${choice:-1}
 [[ $choice == q ]] && exit 0
 VERSIONS=()
 if [[ $choice == a ]]; then
   VERSIONS=(5.1.5 5.2.4 5.3.6 5.4.6 luajit)
+elif [[ $choice == 1 ]]; then
+  VERSIONS=("5.1.5")
 else
   for n in $choice; do
     case $n in
@@ -98,7 +100,6 @@ MINGW* | MSYS* | CYG*)
   SHARED="-DLUA_USE_LINUX"
   ;;
 esac
-
 add_to_rc() {
   local rc_file=$1
   local line="export PATH='$PREFIX/bin:$PATH'"
@@ -175,4 +176,4 @@ else
 fi
 add_to_rc "$HOME/.bashrc"
 add_to_rc "$HOME/.zshrc"
-echo -e "\n✔  Build complete.  Open a new shell or run 'source ~/.bashrc' | 'source ~/.zshrc' for it to take effect ."
+echo -e "\n✔  Lua QuickStart Done UwU ."

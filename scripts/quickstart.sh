@@ -2,7 +2,7 @@
 # qompassai/Lua/scripts/quickstart.sh
 # Qompass AI Diver Lua Quick‑Start
 # Copyright (C) 2025 Qompass AI, All rights reserved
-# --------------------------------------------------
+####################################################
 set -euo pipefail
 PREFIX="$HOME/.local"
 mkdir -p "$PREFIX/bin"

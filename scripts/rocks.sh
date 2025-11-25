@@ -37,7 +37,9 @@ rocks=(
   image_handler
   imagesize
   irc-formatter
+  jsregexp
   kong-plugin-lua-resty-waf
+  lanes
   latex-amsmath
   latex-base
   latex-cyrillic
@@ -91,7 +93,6 @@ rocks=(
   lua-resty-etcd
   lua-resty-exec
   lua-resty-fastutils
-  lua-resty-ffi-python
   lua-resty-gcp
   lua-resty-grpc-gateway
   lua-resty-healthcheck
@@ -158,7 +159,6 @@ rocks=(
   lua-resty-validation
   lua-resty-vardump
   lua-resty-waf
-  lua-resty-weauth
   lua-resty-websocket-kong
   lua-resty-websocket-proxy
   lua-resty-whitelist

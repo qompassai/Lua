@@ -203,7 +203,8 @@ rocks=(
   luv
   llv
   ltext
-  lzlib magick
+  lzlib
+  magick
   markdown
   markdown.sile
   markdown2tex

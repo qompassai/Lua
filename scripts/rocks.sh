@@ -226,6 +226,7 @@ rocks=(
   platformdirs
   r1-lua-resty-waf
   rockbuild
+  selene
   syntaxhighlight
   texrocks
   torch-buffer

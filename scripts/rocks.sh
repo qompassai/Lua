@@ -256,6 +256,7 @@ rocks=(
   string-format-all
   texture-share-vk
   tformat
+  tree-sitter-agda
   tree-sitter-latex
   tree-sitter-markdown
   tree-sitter-markdown_inline

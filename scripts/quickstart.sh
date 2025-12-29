@@ -28,7 +28,7 @@ done
 if [[ ${#MISSING[@]} -gt 0 ]]; then
   printf '\n⚠  The following required tools are missing: %s\n' "${MISSING[*]}"
   if command -v pacman >/dev/null 2>&1 && command -v sudo >/dev/null 2>&1; then
-    echo "→ Attempting to install them system‑wide with sudo pacman -S --needed ${MISSING[*]}"
+    echo "→ Installg sudo pacman -S --needed ${MISSING[*]}"
     if sudo -n true 2>/dev/null; then
       sudo pacman -Sy --needed --noconfirm "${MISSING[@]}"
     else
@@ -102,29 +102,41 @@ MINGW* | MSYS* | CYG*)
 esac
 add_to_rc() {
   local rc_file=$1
-  local line="export PATH='$PREFIX/bin:$PATH'"
+  local line="export PATH='$PREFIX/bin:\$PATH'"
   if [[ -f "$rc_file" ]] && ! grep -Fq "$line" "$rc_file"; then
     printf '\n# added by lua quickstart\n%s\n' "$line" >>"$rc_file"
     echo " → PATH updated in $rc_file"
   fi
 }
 install_luarocks() {
-  local lua_prefix="$1"
+  local lua_prefix="$1" # e.g. ~/.local/lua5.1 or ~/.local/luajit
+  local lua_impl="$2"   # "lua" or "luajit"
   local rocks_prefix="$lua_prefix"
   pushd /tmp >/dev/null
   curl -fsSLO "https://luarocks.org/releases/luarocks-$LUAROCKS_VERSION.tar.gz"
   tar xf "luarocks-$LUAROCKS_VERSION.tar.gz"
   cd "luarocks-$LUAROCKS_VERSION"
-  ./configure \
-    --prefix="$rocks_prefix" \
-    --with-lua="$lua_prefix" \
-    --with-lua-include="$lua_prefix/include" \
-    --with-lua-lib="$lua_prefix/lib"
+  if [[ $lua_impl == "luajit" ]]; then
+    # LuaJIT: headers are usually in include/luajit-2.1, library is libluajit-5.1
+    ./configure \
+      --prefix="$rocks_prefix" \
+      --with-lua="$lua_prefix" \
+      --with-lua-include="$lua_prefix/include/luajit-2.1" \
+      --with-lua-lib="$lua_prefix/lib" \
+      --lua-version=5.1
+  else
+    ./configure \
+      --prefix="$rocks_prefix" \
+      --with-lua="$lua_prefix" \
+      --with-lua-include="$lua_prefix/include" \
+      --with-lua-lib="$lua_prefix/lib"
+  fi
   make -j"$JOBS"
   make install
   local tag
   tag=$(basename "$lua_prefix" | sed 's/^lua//;s/^luajit$/jit/')
   ln -sf "$rocks_prefix/bin/luarocks" "$PREFIX/bin/luarocks$tag"
+
   popd >/dev/null
   rm -rf "/tmp/luarocks-$LUAROCKS_VERSION"
 }
@@ -138,7 +150,7 @@ for v in "${VERSIONS[@]}"; do
     make install PREFIX="$PREFIX/luajit"
     ln -sf "$PREFIX/luajit/bin/luajit" "$PREFIX/bin/luajit"
     popd >/dev/null && rm -rf LuaJIT
-    install_luarocks "$PREFIX/luajit"
+    install_luarocks "$PREFIX/luajit" "luajit"
     continue
   fi
   echo -e "\n=== Lua $v ==="
@@ -146,15 +158,20 @@ for v in "${VERSIONS[@]}"; do
   tar xf "lua-$v.tar.gz" && rm "lua-$v.tar.gz"
   pushd "lua-$v" >/dev/null
   make "$PLATFORM" CC="$CC" MYCFLAGS="$CFLAGS $SHARED" MYLDFLAGS="$LDFLAGS" -j"$JOBS"
-  $CC "$CFLAGS" -shared -o src/liblua.so -Wl,--whole-archive src/liblua.a -Wl,--no-whole-archive -lm
+  $CC $CFLAGS -shared -o src/liblua.so -Wl,--whole-archive src/liblua.a -Wl,--no-whole-archive -lm
+
   short=${v%.*}
   dest="$PREFIX/lua$short"
+
   make install INSTALL_TOP="$dest"
   install -m 755 src/liblua.so "$dest/lib"
+
   ln -sf "$dest/bin/lua" "$PREFIX/bin/lua$short"
   ln -sf "$dest/bin/luac" "$PREFIX/bin/luac$short"
+
   popd >/dev/null && rm -rf "lua-$v"
-  install_luarocks "$dest"
+
+  install_luarocks "$dest" "lua"
   cat >"$dest/lib/pkgconfig/lua$short.pc" <<EOF
 prefix=$dest
 exec_prefix=\${prefix}
@@ -162,7 +179,7 @@ libdir=\${prefix}/lib
 includedir=\${prefix}/include
 Name: Lua $short
 Version: $v
-Libs: -shared -L\${libdir} -llua
+Libs: -L\${libdir} -llua
 Cflags: -I\${includedir}
 EOF
 done

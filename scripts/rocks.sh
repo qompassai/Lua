@@ -257,6 +257,8 @@ rocks=(
   texture-share-vk
   tformat
   tree-sitter-agda
+  tree-sitter-bash
+  tree-sitter-gdshader
   tree-sitter-latex
   tree-sitter-markdown
   tree-sitter-markdown_inline

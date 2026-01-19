@@ -17,11 +17,8 @@ function handle_metadata_changed(m, subject, key, type, value)
         on_demand_objects = {}
         return
     end
-
     local object_id = key .. '@' .. tostring(subject)
-
-    -- destroy existing object instance, if needed
-    if on_demand_objects[object_id] then
+    if on_demand_objects[object_id] then -- destroy existing object instance, if needed
         Log.debug('destroy on-demand object: ' .. object_id)
         on_demand_objects[object_id] = nil
     end
@@ -32,7 +29,6 @@ function handle_metadata_changed(m, subject, key, type, value)
             Log.warning('loading \'' .. object_id .. '\' failed: expected JSON object, got: \'' .. value .. '\'')
             return
         end
-
         local obj = json:parse(1)
         if not obj.type then
             Log.warning('loading \'' .. object_id .. '\' failed: no object type specified')
@@ -52,7 +48,6 @@ function handle_metadata_changed(m, subject, key, type, value)
         on_demand_objects[object_id] = constructor(obj.name, obj.args)
     end
 end
-
 objects_metadata = ImplMetadata('sm-objects')
 objects_metadata:activate(Features.ALL, function(m, e)
     if e then

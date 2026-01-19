@@ -3,10 +3,8 @@ local mutils = {
     cam_data = {},
     cam_source = nil,
 }
--- finds out if any of the managed objects(nodes of a device or devices of
--- device enumerator) has duplicate values
-function mutils.find_duplicate(parent, id, property, value)
-    for i = 0, id - 1, 1 do
+function mutils.find_duplicate(parent, id, property, value) -- finds out if any of the managed objects(nodes of a device or devices of
+    for i = 0, id - 1, 1 do -- device enumerator) has duplicate values
         local obj = parent:get_managed_object(i)
         if obj and obj.properties[property] == value then
             return true
@@ -109,8 +107,7 @@ end
 -- the parties.
 function mutils.register_cam_node(self, parent, id, factory, properties)
     local obj_path = properties['object.path']
-    local api = properties['device.api']
-    -- cache info, it comes handy when creating node
+    local api = properties['device.api'] -- cache info, it comes handy when creating node
     local cam_data = { ---@type WPCameraData ---enumerated cam_data = {} with fields, line 140-167
         id = id,
         parent = parent,

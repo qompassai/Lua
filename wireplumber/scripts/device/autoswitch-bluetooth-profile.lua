@@ -32,14 +32,15 @@ function getSavedHeadsetProfile(device)
     local key = 'saved-headset-profile:' .. device.properties['device.name']
     return headset_profiles[key]
 end
+
 ---@param device       WPDevice
 ---@param profile_name string|nil
 function saveNonHeadsetProfile(device, profile_name)
     non_headset_profiles[device.properties['device.name']] = profile_name
 end
----@param device WPDevice
+
 ---@return string|nil
-function getSavedNonHeadsetProfile(device)
+function getSavedNonHeadsetProfile(device) ---@param device WPDevice
     return non_headset_profiles[device.properties['device.name']]
 end
 
@@ -71,6 +72,7 @@ function getCurrentProfile(device)
     end
     return nil
 end
+
 ---@param device WPDevice
 ---@return table|nil
 function highestPrioProfileWithInputRoute(device)
@@ -90,6 +92,7 @@ function highestPrioProfileWithInputRoute(device)
     end
     return found_profile
 end
+
 ---@param device WPDevice
 ---@return table|nil
 function highestPrioProfileWithoutInputRoute(device)
@@ -109,6 +112,7 @@ function highestPrioProfileWithoutInputRoute(device)
     end
     return found_profile
 end
+
 ---@param device        WPDevice
 ---@param profile_index integer
 ---@return boolean
@@ -125,7 +129,9 @@ function hasProfileInputRoute(device, profile_index)
     end
     return false
 end
-function switchDeviceToHeadsetProfile(dev_id, device_om)
+
+---@param dev_id string|number
+function switchDeviceToHeadsetProfile(dev_id, device_om) ---@param device_om WPObjectManager
     -- Find the actual device
     local device = device_om:lookup({
         Constraint({ 'bound-id', '=', dev_id, type = 'gobject' }),
@@ -135,8 +141,7 @@ function switchDeviceToHeadsetProfile(dev_id, device_om)
         return
     end
 
-    -- Do not switch if the current profile is already a headset profile
-    local cur_profile = getCurrentProfile(device)
+    local cur_profile = getCurrentProfile(device) --- Do not switch if the current profile is already a headset profile
     if cur_profile ~= nil and hasProfileInputRoute(device, cur_profile.index) then
         log:info(device, 'Current profile is already a headset profile, no need to switch')
         return
@@ -169,6 +174,7 @@ function switchDeviceToHeadsetProfile(dev_id, device_om)
         log:warning('Could not find valid headset profile, not switching')
     end
 end
+
 ---@param dev_id integer
 ---@param device_om integer
 function restoreProfile(dev_id, device_om)
@@ -234,6 +240,7 @@ function triggerSwitchDeviceToHeadsetProfile(dev_id, device_om)
         switchDeviceToHeadsetProfile(dev_id, device_om)
     end)
 end
+
 ---@param dev_id integer
 ---@param device_om integer
 function triggerRestoreProfile(dev_id, device_om)
@@ -256,6 +263,11 @@ function triggerRestoreProfile(dev_id, device_om)
     end)
 end
 
+---@param stream WPObject
+---@param node_om WPObjectManager
+---@param link_om WPObjectManager
+---@param visited_link_groups table<string, boolean>|nil
+---@return WPObject|nil bt_node
 function getLinkedBluetoothLoopbackSourceNodeForStream(stream, node_om, link_om, visited_link_groups)
     local stream_id = stream['bound-id']
     -- Make sure the node is linked
@@ -313,6 +325,10 @@ function getLinkedBluetoothLoopbackSourceNodeForStream(stream, node_om, link_om,
     return nil
 end
 
+---@param bt_node WPObject
+---@param node_om WPObjectManager
+---@param link_om WPObjectManager
+---@return boolean
 function isBluetoothLoopbackSourceNodeLinkedToStream(bt_node, node_om, link_om)
     local bt_node_id = bt_node['bound-id']
     for stream in
@@ -388,11 +404,35 @@ local link_added_hook = SimpleEventHook({
         local in_stream_id = link.properties['link.input.node']
         -- Only evaluate bluetooth profiles if a capture stream was linked
         local stream = node_om:lookup({
-            Constraint({ 'media.class', 'matches', 'Stream/Input/Audio', type = 'pw-global' }),
-            Constraint({ 'node.link-group', '-', type = 'pw' }),
-            Constraint({ 'stream.monitor', '!', 'true', type = 'pw' }),
-            Constraint({ 'bluez5.loopback', '!', 'true', type = 'pw' }),
-            Constraint({ 'bound-id', '=', in_stream_id, type = 'gobject' }),
+            Constraint({
+                'media.class',
+                'matches',
+                'Stream/Input/Audio',
+                type = 'pw-global',
+            }),
+            Constraint({
+                'node.link-group',
+                '-',
+                type = 'pw',
+            }),
+            Constraint({
+                'stream.monitor',
+                '!',
+                'true',
+                type = 'pw',
+            }),
+            Constraint({
+                'bluez5.loopback',
+                '!',
+                'true',
+                type = 'pw',
+            }),
+            Constraint({
+                'bound-id',
+                '=',
+                in_stream_id,
+                type = 'gobject',
+            }),
         })
         if stream ~= nil then
             capture_stream_links[link.id] = true
@@ -404,7 +444,11 @@ local link_removed_hook = SimpleEventHook({
     name = 'link-removed@autoswitch-bluetooth-profile',
     interests = {
         EventInterest({
-            Constraint({ 'event.type', '=', 'link-removed' }),
+            Constraint({
+                'event.type',
+                '=',
+                'link-removed',
+            }),
         }),
     },
     execute = function(event)
@@ -422,10 +466,26 @@ local state_changed_hook = SimpleEventHook({
     name = 'bluez-loopback-state-changed@autoswitch-bluetooth-profile',
     interests = {
         EventInterest({
-            Constraint({ 'event.type', '=', 'node-state-changed' }),
-            Constraint({ 'media.class', 'matches', 'Audio/Source' }),
-            Constraint({ 'device.id', '+' }),
-            Constraint({ 'bluez5.loopback', '=', 'true', type = 'pw' }),
+            Constraint({
+                'event.type',
+                '=',
+                'node-state-changed',
+            }),
+            Constraint({
+                'media.class',
+                'matches',
+                'Audio/Source',
+            }),
+            Constraint({
+                'device.id',
+                '+',
+            }),
+            Constraint({
+                'bluez5.loopback',
+                '=',
+                'true',
+                type = 'pw',
+            }),
         }),
     },
     execute = function(event)
@@ -437,10 +497,26 @@ local node_added_hook = SimpleEventHook({
     name = 'bluez-loopback-added@autoswitch-bluetooth-profile',
     interests = {
         EventInterest({
-            Constraint({ 'event.type', '=', 'node-added' }),
-            Constraint({ 'media.class', 'matches', 'Audio/Source' }),
-            Constraint({ 'device.id', '+' }),
-            Constraint({ 'bluez5.loopback', '=', 'true', type = 'pw' }),
+            Constraint({
+                'event.type',
+                '=',
+                'node-added',
+            }),
+            Constraint({
+                'media.class',
+                'matches',
+                'Audio/Source',
+            }),
+            Constraint({
+                'device.id',
+                '+',
+            }),
+            Constraint({
+                'bluez5.loopback',
+                '=',
+                'true',
+                type = 'pw',
+            }),
         }),
     },
     execute = function(event)
@@ -452,9 +528,21 @@ local device_profile_changed_hook = SimpleEventHook({
     name = 'device/store-user-selected-profile',
     interests = {
         EventInterest({
-            Constraint({ 'event.type', '=', 'device-params-changed' }),
-            Constraint({ 'event.subject.param-id', '=', 'Profile' }),
-            Constraint({ 'device.api', '=', 'bluez5' }),
+            Constraint({
+                'event.type',
+                '=',
+                'device-params-changed',
+            }),
+            Constraint({
+                'event.subject.param-id',
+                '=',
+                'Profile',
+            }),
+            Constraint({
+                'device.api',
+                '=',
+                'bluez5',
+            }),
         }),
     },
     execute = function(event)
@@ -473,7 +561,7 @@ local device_profile_changed_hook = SimpleEventHook({
         end
     end,
 })
-function evaluatePersistentStorage()
+function evaluatePersistentStorage() ---Enable or disable persistent bluetooth profile storage.
     if Settings.get_boolean('bluetooth.use-persistent-storage') and not persistent_storage_hooks_registered then
         state = State('bluetooth-autoswitch')
         headset_profiles = state:load()
@@ -485,7 +573,7 @@ function evaluatePersistentStorage()
     end
 end
 
-function evaluateAutoswitch()
+function evaluateAutoswitch() ---Enable or disable bluetooth autoswitch hooks.
     if Settings.get_boolean('bluetooth.autoswitch-to-headset-profile') and not autoswitch_hooks_registered then
         capture_stream_links = {}
         restore_timeout_source = {}

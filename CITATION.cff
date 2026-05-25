@@ -6,8 +6,8 @@ authors:
     given-names: "Matthew A."
     orcid: "https://orcid.org/0000-0002-0302-4812"
     affiliation: "Qompass AI"
-version: "v2026-05-23"
-date-released: "2026-05-23"
+version: "v2026-05-24"
+date-released: "2026-05-24"
 repository-code: "https://github.com/qompassai/Lua"
 license: "Q-CDA-1.0"
 keywords:
@@ -16,6 +16,7 @@ keywords:
   - Healthcare
   - Post-Quantum Cryptography
   - Quantum
-  - opensource
-  - software
+  - config
+  - lua
+  - neovim
 abstract: "Equator Lua: Educational Content on the Lua Programming Language"
